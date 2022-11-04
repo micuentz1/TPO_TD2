@@ -1,0 +1,3 @@
+../Core/Src/libraries/my_ftoa.c:8:6:reverse	32	static
+../Core/Src/libraries/my_ftoa.c:24:5:intToStr	32	static
+../Core/Src/libraries/my_ftoa.c:43:6:my_ftoa	48	static
