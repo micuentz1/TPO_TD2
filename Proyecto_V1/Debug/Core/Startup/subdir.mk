@@ -16,7 +16,7 @@ S_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 Core/Startup/%.o: ../Core/Startup/%.s Core/Startup/subdir.mk
-	arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -I"C:/Users/jron0/Desktop/UTN/Tecnicas Digitales 2/TPO/Tests/Proyecto_V1/Core/Src/libraries" -I"C:/Users/jron0/Desktop/UTN/Tecnicas Digitales 2/TPO/Tests/Proyecto_V1/Core/Inc/libraries" -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -I"C:/Users/TobíasGuerrero/Documents/TPO_TD2/TPO_TD2/Proyecto_V1/Core/Src/libraries" -I"C:/Users/TobíasGuerrero/Documents/TPO_TD2/TPO_TD2/Proyecto_V1/Core/Inc/libraries" -I"C:/Users/TobíasGuerrero/Documents/TPO_TD2/TPO_TD2/Proyecto_V1/Core/Inc/proyecto" -I"C:/Users/TobíasGuerrero/Documents/TPO_TD2/TPO_TD2/Proyecto_V1/Core/Src/proyecto" -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@" "$<"
 
 clean: clean-Core-2f-Startup
 
