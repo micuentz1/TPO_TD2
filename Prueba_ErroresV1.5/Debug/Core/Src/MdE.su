@@ -1,0 +1,8 @@
+../Core/Src/MdE.c:37:6:Tarea_Lectura	24	static
+../Core/Src/MdE.c:56:6:Error_Sensores	40	static
+../Core/Src/MdE.c:86:6:Error_Anafe	32	static
+../Core/Src/MdE.c:118:6:Boton_Ok	16	static
+../Core/Src/MdE.c:131:6:Boton_Cancel	16	static
+../Core/Src/MdE.c:144:6:Boton_Sel	16	static
+../Core/Src/MdE.c:157:6:MdE_Display	16	static
+../Core/Src/MdE.c:218:6:print_Display	16	static
