@@ -1,0 +1,8 @@
+../Core/Src/proyecto/MdE.c:39:6:Tarea_Lectura	24	static
+../Core/Src/proyecto/MdE.c:58:6:Error_Sensores	40	static
+../Core/Src/proyecto/MdE.c:88:6:Error_Anafe	32	static
+../Core/Src/proyecto/MdE.c:120:6:Boton_Ok	16	static
+../Core/Src/proyecto/MdE.c:133:6:Boton_Cancel	16	static
+../Core/Src/proyecto/MdE.c:146:6:Boton_Sel	16	static
+../Core/Src/proyecto/MdE.c:159:6:MdE_Display	16	static
+../Core/Src/proyecto/MdE.c:225:6:print_Display	16	static
