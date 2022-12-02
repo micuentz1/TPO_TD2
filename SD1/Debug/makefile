@@ -64,8 +64,8 @@ all: main-build
 main-build: SD1.elf secondary-outputs
 
 # Tool invocations
-SD1.elf SD1.map: $(OBJS) $(USER_OBJS) C:\Users\jron0\Desktop\UTN\Tecnicas\ Digitales\ 2\TPO\Tests\SD1\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "SD1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\jron0\Desktop\UTN\Tecnicas Digitales 2\TPO\Tests\SD1\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+SD1.elf SD1.map: $(OBJS) $(USER_OBJS) C:\Users\tobig\Documents\TPO_TD2\SD1\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "SD1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\tobig\Documents\TPO_TD2\SD1\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

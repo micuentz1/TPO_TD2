@@ -63,8 +63,8 @@ all: main-build
 main-build: SD.elf secondary-outputs
 
 # Tool invocations
-SD.elf SD.map: $(OBJS) $(USER_OBJS) D:\ProyectosSTM32\SD\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "SD.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\ProyectosSTM32\SD\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+SD.elf SD.map: $(OBJS) $(USER_OBJS) C:\Users\tobig\Documents\TPO_TD2\SD\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "SD.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\tobig\Documents\TPO_TD2\SD\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

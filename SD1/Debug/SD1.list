@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000029  00000000  00000000  00020024  2**0
                   CONTENTS, READONLY
- 12 .debug_info   0000978f  00000000  00000000  0002004d  2**0
+ 12 .debug_info   000097a1  00000000  00000000  0002004d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00001ead  00000000  00000000  000297dc  2**0
+ 13 .debug_abbrev 00001ead  00000000  00000000  000297ee  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000988  00000000  00000000  0002b690  2**3
+ 14 .debug_aranges 00000988  00000000  00000000  0002b6a0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00000880  00000000  00000000  0002c018  2**3
+ 15 .debug_ranges 00000880  00000000  00000000  0002c028  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  000179e5  00000000  00000000  0002c898  2**0
+ 16 .debug_macro  000179e5  00000000  00000000  0002c8a8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000cd33  00000000  00000000  0004427d  2**0
+ 17 .debug_line   0000cd75  00000000  00000000  0004428d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00082018  00000000  00000000  00050fb0  2**0
+ 18 .debug_str    00082004  00000000  00000000  00051002  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000050  00000000  00000000  000d2fc8  2**0
+ 19 .comment      00000050  00000000  00000000  000d3006  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00002514  00000000  00000000  000d3018  2**2
+ 20 .debug_frame  00002514  00000000  00000000  000d3058  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1798,6 +1798,10 @@ int main(void)
  8000b66:	490b      	ldr	r1, [pc, #44]	; (8000b94 <main+0xbc>)
  8000b68:	480c      	ldr	r0, [pc, #48]	; (8000b9c <main+0xc4>)
  8000b6a:	f005 fe4f 	bl	800680c <f_puts>
+  /*f_open(&fil1, "write.txt", FA_OPEN_ALWAYS | FA_WRITE | FA_READ);
+  f_lseek(&fil1, fil1.fsize);
+  f_puts("Probando\n", &fil1);
+  f_close(&fil1);*/
 
   if(f_close(&fil)) lectura_SD = 0;  // Si se desconecto la tarjeta o hay error, mandar a ventana error SD
  8000b6e:	4809      	ldr	r0, [pc, #36]	; (8000b94 <main+0xbc>)

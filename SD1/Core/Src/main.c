@@ -34,7 +34,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 FATFS fs;
-FIL fil;
+FIL fil,fil1;
 char buffer_SD[3];
 char escritura_SD[3];
 uint8_t lectura_SD;
@@ -112,6 +112,11 @@ int main(void)
   escritura_SD[1] = 119;
   escritura_SD[2] = 117;
   f_puts(escritura_SD, &fil);
+
+  /*f_open(&fil1, "write.txt", FA_OPEN_ALWAYS | FA_WRITE | FA_READ);
+  f_lseek(&fil1, fil1.fsize);
+  f_puts("Probando\n", &fil1);
+  f_close(&fil1);*/
 
   if(f_close(&fil)) lectura_SD = 0;  // Si se desconecto la tarjeta o hay error, mandar a ventana error SD
   /* USER CODE END 2 */
