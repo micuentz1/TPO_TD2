@@ -1,0 +1,6 @@
+../Core/Src/proyecto/MdE.c:55:6:Tarea_Lectura	24	static
+../Core/Src/proyecto/MdE.c:76:6:Error_Sensores	24	static
+../Core/Src/proyecto/MdE.c:108:6:Error_Anafe	32	static
+../Core/Src/proyecto/MdE.c:142:6:Tarea_Timer	24	static
+../Core/Src/proyecto/MdE.c:166:6:MdE_Principal	16	static
+../Core/Src/proyecto/MdE.c:392:6:print_Display	16	static
