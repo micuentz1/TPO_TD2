@@ -1,5 +1,5 @@
 Core/Src/proyecto/funciones.o: ../Core/Src/proyecto/funciones.c \
- C:/Users/jron0/Desktop/UTN/Tecnicas\ Digitales\ 2/WorkspaceFinal/CafeteraItaliana/Core/Inc/proyecto/funciones.h \
+ D:/jron0/Documents/Workspace2/CafeteraItaliana/Core/Inc/proyecto/funciones.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../Core/Inc/FreeRTOSConfig.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
@@ -40,7 +40,7 @@ Core/Src/proyecto/funciones.o: ../Core/Src/proyecto/funciones.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/OneWire.h ../Core/Inc/main.h \
- C:/Users/jron0/Desktop/UTN/Tecnicas\ Digitales\ 2/WorkspaceFinal/CafeteraItaliana/Core/Inc/proyecto/MdE.h \
+ D:/jron0/Documents/Workspace2/CafeteraItaliana/Core/Inc/proyecto/MdE.h \
  ../Core/Inc/File_Handling_RTOS.h ../FATFS/App/fatfs.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h \
  ../Middlewares/Third_Party/FatFs/src/integer.h ../FATFS/Target/ffconf.h \
@@ -56,7 +56,7 @@ Core/Src/proyecto/funciones.o: ../Core/Src/proyecto/funciones.c \
  ../Middlewares/Third_Party/FatFs/src/diskio.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/user_diskio.h \
  ../Core/Inc/fatfs_sd.h
-C:/Users/jron0/Desktop/UTN/Tecnicas\ Digitales\ 2/WorkspaceFinal/CafeteraItaliana/Core/Inc/proyecto/funciones.h:
+D:/jron0/Documents/Workspace2/CafeteraItaliana/Core/Inc/proyecto/funciones.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -98,7 +98,7 @@ C:/Users/jron0/Desktop/UTN/Tecnicas\ Digitales\ 2/WorkspaceFinal/CafeteraItalian
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
 ../Core/Inc/OneWire.h:
 ../Core/Inc/main.h:
-C:/Users/jron0/Desktop/UTN/Tecnicas\ Digitales\ 2/WorkspaceFinal/CafeteraItaliana/Core/Inc/proyecto/MdE.h:
+D:/jron0/Documents/Workspace2/CafeteraItaliana/Core/Inc/proyecto/MdE.h:
 ../Core/Inc/File_Handling_RTOS.h:
 ../FATFS/App/fatfs.h:
 ../Middlewares/Third_Party/FatFs/src/ff.h:

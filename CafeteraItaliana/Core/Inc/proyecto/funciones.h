@@ -49,6 +49,8 @@ char BarridoTeclado(void);
 #define BOTON_SEL		2
 #define BOTON_CANCEL	3
 #define	BOTON_ON		4
+
+enum registroSD {EXITOSO = 0, CANCELADO, ERRONEO};
 // ********************************************************
 
 void InitAll(void);
@@ -60,5 +62,7 @@ void SetLED(char estado, char led);
 void IniciarPreparacion(void);
 void FinalizarPreparacion(void);
 void escribir_SD(void);
+void hora_SD(void);
+void registro_SD(int);
 
 #endif

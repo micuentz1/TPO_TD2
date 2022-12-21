@@ -69,8 +69,8 @@ all: main-build
 main-build: CafeteraItaliana.elf secondary-outputs
 
 # Tool invocations
-CafeteraItaliana.elf CafeteraItaliana.map: $(OBJS) $(USER_OBJS) C:\Users\jron0\Desktop\UTN\Tecnicas\ Digitales\ 2\WorkspaceFinal\CafeteraItaliana\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "CafeteraItaliana.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\jron0\Desktop\UTN\Tecnicas Digitales 2\WorkspaceFinal\CafeteraItaliana\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CafeteraItaliana.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+CafeteraItaliana.elf CafeteraItaliana.map: $(OBJS) $(USER_OBJS) D:\jron0\Documents\Workspace2\CafeteraItaliana\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "CafeteraItaliana.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\jron0\Documents\Workspace2\CafeteraItaliana\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CafeteraItaliana.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

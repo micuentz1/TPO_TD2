@@ -51,8 +51,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FatFs/src/diskio.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/user_diskio.h \
  ../Core/Inc/liquidcrystal_i2c.h ../Core/Inc/OneWire.h \
- C:/Users/jron0/Desktop/UTN/Tecnicas\ Digitales\ 2/WorkspaceFinal/CafeteraItaliana/Core/Inc/proyecto/MdE.h \
- C:/Users/jron0/Desktop/UTN/Tecnicas\ Digitales\ 2/WorkspaceFinal/CafeteraItaliana/Core/Inc/proyecto/funciones.h \
+ D:/jron0/Documents/Workspace2/CafeteraItaliana/Core/Inc/proyecto/MdE.h \
+ D:/jron0/Documents/Workspace2/CafeteraItaliana/Core/Inc/proyecto/funciones.h \
  ../Core/Inc/File_Handling_RTOS.h ../Core/Inc/fatfs_sd.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
@@ -111,7 +111,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../FATFS/Target/user_diskio.h:
 ../Core/Inc/liquidcrystal_i2c.h:
 ../Core/Inc/OneWire.h:
-C:/Users/jron0/Desktop/UTN/Tecnicas\ Digitales\ 2/WorkspaceFinal/CafeteraItaliana/Core/Inc/proyecto/MdE.h:
-C:/Users/jron0/Desktop/UTN/Tecnicas\ Digitales\ 2/WorkspaceFinal/CafeteraItaliana/Core/Inc/proyecto/funciones.h:
+D:/jron0/Documents/Workspace2/CafeteraItaliana/Core/Inc/proyecto/MdE.h:
+D:/jron0/Documents/Workspace2/CafeteraItaliana/Core/Inc/proyecto/funciones.h:
 ../Core/Inc/File_Handling_RTOS.h:
 ../Core/Inc/fatfs_sd.h:

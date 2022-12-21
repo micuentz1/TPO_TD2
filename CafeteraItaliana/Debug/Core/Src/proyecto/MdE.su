@@ -3,7 +3,6 @@
 ../Core/Src/proyecto/MdE.c:115:6:Error_Anafe	32	static
 ../Core/Src/proyecto/MdE.c:152:6:Tarea_Timer	24	static
 ../Core/Src/proyecto/MdE.c:178:6:Tarea_Timer2	24	static
-../Core/Src/proyecto/MdE.c:212:6:Tarea_BOTON_ON	16	static
+../Core/Src/proyecto/MdE.c:210:6:Tarea_BOTON_ON	16	static
 ../Core/Src/proyecto/MdE.c:229:6:MdE_Principal	16	static
-../Core/Src/proyecto/MdE.c:447:6:print_Display	16	static
-../Core/Src/proyecto/MdE.c:585:6:Tarea_SD	16	static
+../Core/Src/proyecto/MdE.c:456:6:print_Display	16	static

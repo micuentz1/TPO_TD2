@@ -162,15 +162,14 @@ int main(void)
   /* add threads, ... */
 
 
-  xTaskCreate(MdE_Principal, "MdE", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
+  xTaskCreate(MdE_Principal, "MdE", configMINIMAL_STACK_SIZE*2, NULL, 1, NULL);
   xTaskCreate(DriverTeclado, "Driver Teclado", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
   xTaskCreate(Tarea_BOTON_ON, "Boton ON", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
-  xTaskCreate(Tarea_Lectura, "Lectura Temperatura", configMINIMAL_STACK_SIZE, NULL, 2, Handler_Lectura);
-  xTaskCreate(Tarea_Timer, "Tarea Timer",configMINIMAL_STACK_SIZE,NULL, 2, Handler_Timer);
-  xTaskCreate(Tarea_Timer2, "Tarea Timer 2",configMINIMAL_STACK_SIZE,NULL, 2, Handler_Timer2);
-  xTaskCreate(Error_Sensores, "Error Sensores", configMINIMAL_STACK_SIZE, NULL, 3, Handler_Sensores);
-  xTaskCreate(Error_Anafe, "Error Anafe", configMINIMAL_STACK_SIZE, NULL, 4, Handler_Anafe);
-  xTaskCreate(Tarea_SD,"Tarea SD",configMINIMAL_STACK_SIZE,NULL,4,NULL);
+  xTaskCreate(Tarea_Lectura, "Lectura Temperatura", configMINIMAL_STACK_SIZE, NULL, 1, Handler_Lectura);
+  xTaskCreate(Tarea_Timer, "Tarea Timer",configMINIMAL_STACK_SIZE,NULL, 1, Handler_Timer);
+  xTaskCreate(Tarea_Timer2, "Tarea Timer 2",configMINIMAL_STACK_SIZE,NULL, 1, Handler_Timer2);
+  xTaskCreate(Error_Sensores, "Error Sensores", configMINIMAL_STACK_SIZE, NULL, 1, Handler_Sensores);
+  xTaskCreate(Error_Anafe, "Error Anafe", configMINIMAL_STACK_SIZE, NULL, 1, Handler_Anafe);
 
   HAL_TIM_Base_Start_IT(&htim1);
   /* USER CODE END RTOS_THREADS */
@@ -284,8 +283,8 @@ static void MX_RTC_Init(void)
 
   /* USER CODE END RTC_Init 0 */
 
-  RTC_TimeTypeDef sTime = {0};
-  RTC_DateTypeDef DateToUpdate = {0};
+//  RTC_TimeTypeDef sTime = {0};
+//  RTC_DateTypeDef DateToUpdate = {0};
 
   /* USER CODE BEGIN RTC_Init 1 */
 
@@ -307,23 +306,23 @@ static void MX_RTC_Init(void)
 
   /** Initialize RTC and set the Time and Date
   */
-  sTime.Hours = 19;
-  sTime.Minutes = 0;
-  sTime.Seconds = 0;
-
-  if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  DateToUpdate.WeekDay = RTC_WEEKDAY_SATURDAY;
-  DateToUpdate.Month = RTC_MONTH_DECEMBER;
-  DateToUpdate.Date = 17;
-  DateToUpdate.Year = 22;
-
-  if (HAL_RTC_SetDate(&hrtc, &DateToUpdate, RTC_FORMAT_BIN) != HAL_OK)
-  {
-    Error_Handler();
-  }
+//  sTime.Hours = 17;
+//  sTime.Minutes = 26;
+//  sTime.Seconds = 0;
+//
+//  if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN) != HAL_OK)
+//  {
+//    Error_Handler();
+//  }
+//  DateToUpdate.WeekDay = RTC_WEEKDAY_WEDNESDAY;
+//  DateToUpdate.Month = RTC_MONTH_DECEMBER;
+//  DateToUpdate.Date = 21;
+//  DateToUpdate.Year = 22;
+//
+//  if (HAL_RTC_SetDate(&hrtc, &DateToUpdate, RTC_FORMAT_BIN) != HAL_OK)
+//  {
+//    Error_Handler();
+//  }
   /* USER CODE BEGIN RTC_Init 2 */
 
   /* USER CODE END RTC_Init 2 */

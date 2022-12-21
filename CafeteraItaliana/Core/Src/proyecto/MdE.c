@@ -87,14 +87,14 @@ void Error_Sensores( void *p )
 		    // Cuando el sensor no lee bien indica 85 grados, usamos eso para determinar cual fallo
 		    if(dif>MAX_DIF_P)
 		    {
-		    	componentes[2] = 0; // Fallo el sensor 2
+		    	componentes[2] = '0'; // Fallo el sensor 2
 		    	estado_comp = ERROR_SENSOR_2;
 
 		    	// CARGAR EN LA SD EL ERROR
 		    	//escribir_SD();
 		    }
 		    else if(dif<MAX_DIF_N){
-		    	componentes[1] = 0; // Fallo el sensor 1
+		    	componentes[1] = '0'; // Fallo el sensor 1
 		    	estado_comp = ERROR_SENSOR_1;
 
 		    	// CARGAR EN LA SD EL ERROR
@@ -118,7 +118,7 @@ void Error_Anafe(void *p)
 
 	while(1)
 	{
-		if(f_preparacion && (tiempoRestante<=7))
+		if(f_preparacion && (tiempoRestante<=4) && (!faseFinal))
 		{
 			dif_s0 = Temp[0]-auxTemp[0];
 			dif_s1 = Temp[1]-auxTemp[1];
@@ -131,7 +131,7 @@ void Error_Anafe(void *p)
 				SetLED(OFF, VERDE);
 				SetLED(ON, ROJO);
 
-				componentes[0] = 0; // Fallo el anafe
+				componentes[0] = '0'; // Fallo el anafe
 				estado_comp = ERROR_ANAFE;
 
 				// CARGAR EN LA SD EL ERROR
@@ -141,7 +141,7 @@ void Error_Anafe(void *p)
 
 
 		}
-		vTaskDelay(15*ONE_SEC); // Que mida cada 5 secs
+		vTaskDelay(15*ONE_SEC); // Que mida cada 15 secs
 	}
 
 	vTaskDelete(NULL); // En caso de romperse el loop
@@ -185,8 +185,6 @@ void Tarea_Timer2(void *p)
 	{
 		vTaskDelayUntil(&xLastWakeTime2,1000);
 
-		HAL_RTC_GetTime(&hrtc, &horaActual, RTC_FORMAT_BIN);
-
 		if(f_preparacion)
 		{
 			if((horaActual.Seconds >= horaFicticia.Seconds) && (horaActual.Minutes == horaFicticia.Minutes+1))
@@ -213,6 +211,8 @@ void Tarea_BOTON_ON(void *p)
 {
 	while(1)
 	{
+		HAL_RTC_GetTime(&hrtc, &horaActual, RTC_FORMAT_BIN);
+
 		if(bufferTeclado == BOTON_ON) {
 			HD44780_Clear();
 			HAL_NVIC_SystemReset();
@@ -232,7 +232,7 @@ void MdE_Principal(void *p)
 
 	while(1)
 	{
-		HAL_RTC_GetTime(&hrtc, &horaActual, RTC_FORMAT_BIN);
+		//HAL_RTC_GetTime(&hrtc, &horaActual, RTC_FORMAT_BIN);
 
 		switch(estado_MdE)
 		{
@@ -256,6 +256,7 @@ void MdE_Principal(void *p)
 				else if(estado_comp == FALTA_SD)
 				{
 					print_Display(DIS_FALTA_SD);
+					LecturaSD();
 					// Lea de nuevo
 				}
 				else if(estado_comp >1) // Identificar error
@@ -273,6 +274,8 @@ void MdE_Principal(void *p)
 					estado_MdE = MENU_PPAL;
 					print_Display(DIS_MENU_PPAL);
 					cursor = 0;
+					componentes[3] = '0';
+					escribir_SD();
 				}
 				else if( (horaActual.Hours == horaProgramada.Hours) && (horaActual.Minutes == horaProgramada.Minutes) )
 				{
@@ -313,7 +316,7 @@ void MdE_Principal(void *p)
 
 							HAL_RTC_GetTime(&hrtc, &horaActual, RTC_FORMAT_BIN);
 							horaProgramada.Hours = horaActual.Hours;
-							horaProgramada.Minutes = 0;
+							horaProgramada.Minutes = (horaActual.Minutes/10)*10;
 							horaProgramada.Seconds = 0;
 							sprintf(horaStr, "%d", horaProgramada.Hours);
 							sprintf(minutoStr, "%d", horaProgramada.Minutes);
@@ -372,6 +375,9 @@ void MdE_Principal(void *p)
 						{
 							estado_MdE = PROGRAMADO;
 							print_Display(DIS_PROGRAMADO);
+							componentes[3] = '1';
+							escribir_SD();
+							hora_SD();
 						}
 						break;
 
@@ -393,7 +399,8 @@ void MdE_Principal(void *p)
 					FinalizarPreparacion();
 					estado_MdE = E_ERROR;
 					print_Display(estado_comp + 4);
-					escribirSD = 1;
+					escribir_SD();
+					registro_SD(ERRONEO);
 				}
 				else if(getKey() == BOTON_OK) // Cancelan el cafe
 				{
@@ -402,8 +409,9 @@ void MdE_Principal(void *p)
 					estado_MdE = MENU_PPAL;
 					print_Display(DIS_MENU_PPAL);
 					cursor = 0;
+					registro_SD(CANCELADO);
 				}
-				else if( (temperatura >= 100) && (!faseFinal) )
+				else if( (temperatura >= 95) && (!faseFinal) )
 				{
 					faseFinal = 1;
 				}
@@ -424,6 +432,7 @@ void MdE_Principal(void *p)
 					estado_MdE = MENU_PPAL;
 					print_Display(DIS_MENU_PPAL);
 					cursor = 0;
+					registro_SD(EXITOSO);
 				}
 				break;
 
@@ -436,7 +445,7 @@ void MdE_Principal(void *p)
 
 		}
 
-		vTaskDelay(500);
+		vTaskDelay(1000);
 	}
 
 	vTaskDelete(NULL);
@@ -580,19 +589,3 @@ void print_Display(uint8_t estado)
 	}
 }
 
-//************************************************************************************************************
-
-void Tarea_SD( void *p )
-{
-	while(1)
-	{
-		if(escribirSD)
-		{
-			escribir_SD();
-			escribirSD = 0;
-		}
-		vTaskDelay(1000);
-	}
-
-	vTaskDelete(NULL);
-}

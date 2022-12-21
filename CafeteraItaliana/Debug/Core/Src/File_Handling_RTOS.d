@@ -51,7 +51,7 @@ Core/Src/File_Handling_RTOS.o: ../Core/Src/File_Handling_RTOS.c \
  ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
  ../Middlewares/Third_Party/FatFs/src/diskio.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/user_diskio.h \
- ../Core/Inc/fatfs_sd.h ../Core/Inc/liquidcrystal_i2c.h
+ ../Core/Inc/fatfs_sd.h
 ../Core/Inc/File_Handling_RTOS.h:
 ../FATFS/App/fatfs.h:
 ../Middlewares/Third_Party/FatFs/src/ff.h:
@@ -109,4 +109,3 @@ Core/Src/File_Handling_RTOS.o: ../Core/Src/File_Handling_RTOS.c \
 ../Middlewares/Third_Party/FatFs/src/ff.h:
 ../FATFS/Target/user_diskio.h:
 ../Core/Inc/fatfs_sd.h:
-../Core/Inc/liquidcrystal_i2c.h:

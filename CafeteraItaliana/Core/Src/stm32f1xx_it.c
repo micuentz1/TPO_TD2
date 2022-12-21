@@ -69,8 +69,6 @@ void SDTimer_Handler(void)
 /* External variables --------------------------------------------------------*/
 extern UART_HandleTypeDef huart1;
 extern TIM_HandleTypeDef htim4;
-extern TIM_HandleTypeDef htim1;
-extern TIM_HandleTypeDef htim2;
 
 /* USER CODE BEGIN EV */
 

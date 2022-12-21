@@ -16,7 +16,7 @@ S_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 Core/Startup/%.o: ../Core/Startup/%.s Core/Startup/subdir.mk
-	arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -I"C:/Users/jron0/Desktop/UTN/Tecnicas Digitales 2/WorkspaceFinal/CafeteraItaliana/Core/Inc/proyecto" -I"C:/Users/jron0/Desktop/UTN/Tecnicas Digitales 2/WorkspaceFinal/CafeteraItaliana/Core/Inc" -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -I"D:/jron0/Documents/Workspace2/CafeteraItaliana/Core/Inc/proyecto" -I"D:/jron0/Documents/Workspace2/CafeteraItaliana/Core/Inc" -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@" "$<"
 
 clean: clean-Core-2f-Startup
 

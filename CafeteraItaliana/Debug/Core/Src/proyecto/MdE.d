@@ -16,9 +16,9 @@ Core/Src/proyecto/MdE.o: ../Core/Src/proyecto/MdE.c \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- C:/Users/jron0/Desktop/UTN/Tecnicas\ Digitales\ 2/WorkspaceFinal/CafeteraItaliana/Core/Inc/proyecto/funciones.h \
+ D:/jron0/Documents/Workspace2/CafeteraItaliana/Core/Inc/proyecto/funciones.h \
  ../Core/Inc/OneWire.h \
- C:/Users/jron0/Desktop/UTN/Tecnicas\ Digitales\ 2/WorkspaceFinal/CafeteraItaliana/Core/Inc/proyecto/MdE.h \
+ D:/jron0/Documents/Workspace2/CafeteraItaliana/Core/Inc/proyecto/MdE.h \
  ../Core/Inc/liquidcrystal_i2c.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
@@ -67,9 +67,9 @@ Core/Src/proyecto/MdE.o: ../Core/Src/proyecto/MdE.c \
 ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
-C:/Users/jron0/Desktop/UTN/Tecnicas\ Digitales\ 2/WorkspaceFinal/CafeteraItaliana/Core/Inc/proyecto/funciones.h:
+D:/jron0/Documents/Workspace2/CafeteraItaliana/Core/Inc/proyecto/funciones.h:
 ../Core/Inc/OneWire.h:
-C:/Users/jron0/Desktop/UTN/Tecnicas\ Digitales\ 2/WorkspaceFinal/CafeteraItaliana/Core/Inc/proyecto/MdE.h:
+D:/jron0/Documents/Workspace2/CafeteraItaliana/Core/Inc/proyecto/MdE.h:
 ../Core/Inc/liquidcrystal_i2c.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
