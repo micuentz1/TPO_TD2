@@ -1,9 +1,0 @@
-../Core/Src/proyecto/funciones.c:15:6:InitAll	8	static
-../Core/Src/proyecto/funciones.c:38:6:InitLCD	8	static
-../Core/Src/proyecto/funciones.c:52:6:LecturaSD	4	static
-../Core/Src/proyecto/funciones.c:61:6:getKey	16	static
-../Core/Src/proyecto/funciones.c:73:6:BarridoTeclado	8	static
-../Core/Src/proyecto/funciones.c:81:6:DriverTeclado	16	static
-../Core/Src/proyecto/funciones.c:196:6:SetRelay	16	static
-../Core/Src/proyecto/funciones.c:202:6:SetBuzzer	16	static
-../Core/Src/proyecto/funciones.c:208:6:SetLED	24	static

@@ -1,4 +1,0 @@
-../Core/Src/MdE.c:33:6:Tarea_Lectura	24	static
-../Core/Src/MdE.c:52:6:Error_Sensores	40	static
-../Core/Src/MdE.c:82:6:Error_Anafe	32	static
-../Core/Src/MdE.c:114:6:Boton_Ok	16	static
