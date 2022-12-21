@@ -1,0 +1,12 @@
+../Core/Src/proyecto/funciones.c:36:6:InitAll	8	static
+../Core/Src/proyecto/funciones.c:53:6:InitLCD	8	static
+../Core/Src/proyecto/funciones.c:69:6:LecturaSD	32	static
+../Core/Src/proyecto/funciones.c:158:6:escribir_SD	8	static
+../Core/Src/proyecto/funciones.c:175:6:getKey	16	static
+../Core/Src/proyecto/funciones.c:187:6:BarridoTeclado	8	static
+../Core/Src/proyecto/funciones.c:196:6:DriverTeclado	16	static
+../Core/Src/proyecto/funciones.c:249:6:SetRelay	16	static
+../Core/Src/proyecto/funciones.c:257:6:SetBuzzer	16	static
+../Core/Src/proyecto/funciones.c:265:6:SetLED	24	static
+../Core/Src/proyecto/funciones.c:279:6:IniciarPreparacion	8	static
+../Core/Src/proyecto/funciones.c:302:6:FinalizarPreparacion	8	static
